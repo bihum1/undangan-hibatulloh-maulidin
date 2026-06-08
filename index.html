@@ -1,93 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Undangan Pernikahan | Muhammad Hibatulloh & Maulidin Nimaturrosyidah</title>
-  <meta name="description" content="Undangan Pernikahan Muhammad Hibatulloh & Maulidin Nimaturrosyidah">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan | Hibatulloh & Maulidin</title>
+
+  <meta name="description" content="Undangan pernikahan Muhammad Hibatulloh & Maulidin Nimaturrosyidah">
+  <meta property="og:title" content="Undangan Pernikahan Hibatulloh & Maulidin">
+  <meta property="og:description" content="Dengan hormat kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/cover.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div id="loading">
+    <div class="loader-ring"></div>
+    <p>Memuat Undangan...</p>
+  </div>
+
   <audio id="bgMusic" loop>
     <source src="assets/audio/music.mp3" type="audio/mpeg">
   </audio>
 
-  <button class="music-btn" id="musicBtn" aria-label="Kontrol musik">♪</button>
-  <div class="floating-leaves" id="floatingLeaves"></div>
-  <div class="mist mist-1"></div>
-  <div class="mist mist-2"></div>
+  <button id="musicBtn" class="music-btn" title="Musik">
+    <i class="bi bi-music-note-beamed"></i>
+  </button>
 
-  <main class="phone-frame">
-    <section class="cover-screen" id="cover">
-      <div class="bird bird-a">⌁</div>
-      <div class="bird bird-b">⌁</div>
-      <div class="temple-sky"></div>
-      <div class="gate gate-left"></div>
-      <div class="gate gate-right"></div>
-      <div class="cover-content">
-        <p class="small-title">The Wedding Of</p>
-        <h1>Muhammad Hibatulloh</h1>
-        <div class="amp">&</div>
-        <h1>Maulidin Nimaturrosyidah</h1>
-        <p class="date-text">Kepada Bapak/Ibu/Saudara/i</p>
-        <button class="open-btn" id="openInvitation">Buka Undangan</button>
-      </div>
-    </section>
+  <section id="cover" class="cover-section">
+    <div class="fog fog-1"></div>
+    <div class="fog fog-2"></div>
+    <div class="moon"></div>
+    <div class="bird bird-1">⌁</div>
+    <div class="bird bird-2">⌁</div>
 
-    <section class="hero section-panel" id="home">
-      <div class="moon"></div>
-      <div class="javanese-house">
-        <div class="roof roof-top"></div>
-        <div class="roof roof-main"></div>
-        <div class="house-body">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-      <div class="hero-content" data-aos="zoom-in">
-        <p class="small-title">The Wedding Of</p>
-        <h2>Muhammad Hibatulloh</h2>
-        <div class="amp">&</div>
-        <h2>Maulidin Nimaturrosyidah</h2>
-        <p class="hero-subtitle">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami.</p>
-      </div>
-    </section>
+    <div class="gate gate-left"></div>
+    <div class="gate gate-right"></div>
 
-    <section class="section-panel quote-section">
+    <div class="cover-content">
+      <p class="small-title">The Wedding of</p>
+      <h1>Muhammad Hibatulloh</h1>
+      <div class="amp">&</div>
+      <h1>Maulidin Nimaturrosyidah</h1>
+      <p class="date">Ahad, 21 September 2026</p>
+      <button id="openInvitation" class="btn-gold">
+        <i class="bi bi-envelope-heart"></i> Buka Undangan
+      </button>
+      <p class="guest">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    </div>
+  </section>
+
+  <main id="content" class="hidden">
+    <section class="hero section-jawa">
       <div class="ornament top"></div>
-      <div class="container text-center" data-aos="fade-up">
-        <p class="arabic">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا</p>
-        <p class="quote">“Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu cenderung dan merasa tenteram kepadanya.”</p>
-        <strong>QS. Ar-Rum: 21</strong>
+      <div class="container">
+        <p class="sub">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+        <h2>Hibatulloh & Maulidin</h2>
+        <p class="lead">
+          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.
+        </p>
       </div>
     </section>
 
-    <section class="section-panel couple-section">
-      <div class="container text-center">
-        <p class="small-title" data-aos="fade-up">Mempelai</p>
-        <div class="couple-card" data-aos="fade-right">
-          <div class="photo-placeholder">MH</div>
-          <h3>Muhammad Hibatulloh</h3>
-          <p>Putra dari Bapak .......... & Ibu ..........</p>
-        </div>
-        <div class="amp dark" data-aos="zoom-in">&</div>
-        <div class="couple-card" data-aos="fade-left">
-          <div class="photo-placeholder">MN</div>
-          <h3>Maulidin Nimaturrosyidah</h3>
-          <p>Putri dari Bapak .......... & Ibu ..........</p>
+    <section class="couple section-light">
+      <div class="container">
+        <h3 class="section-title">Mempelai</h3>
+        <div class="couple-grid">
+          <div class="profile-card">
+            <div class="photo-frame groom"></div>
+            <h4>Muhammad Hibatulloh</h4>
+            <p>Putra dari Bapak Abdullah<br>dan Ibu Siti Aminah</p>
+          </div>
+          <div class="center-symbol">&</div>
+          <div class="profile-card">
+            <div class="photo-frame bride"></div>
+            <h4>Maulidin Nimaturrosyidah</h4>
+            <p>Putri dari Bapak Ahmad<br>dan Ibu Nur Hasanah</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-panel countdown-section">
-      <div class="container text-center" data-aos="fade-up">
-        <p class="small-title">Menuju Hari Bahagia</p>
-        <h2 class="section-title">Save The Date</h2>
-        <div class="countdown" id="countdown">
+    <section class="countdown section-jawa">
+      <div class="container">
+        <h3 class="section-title">Menuju Hari Bahagia</h3>
+        <div id="countdownBox" class="countdown-grid">
           <div><strong id="days">00</strong><span>Hari</span></div>
           <div><strong id="hours">00</strong><span>Jam</span></div>
           <div><strong id="minutes">00</strong><span>Menit</span></div>
@@ -96,63 +98,123 @@
       </div>
     </section>
 
-    <section class="section-panel event-section">
+    <section class="events section-light">
       <div class="container">
-        <p class="small-title text-center" data-aos="fade-up">Rangkaian Acara</p>
-        <div class="event-card" data-aos="fade-up">
-          <h3>Akad Nikah</h3>
-          <p class="big-date">Minggu, 28 Desember 2026</p>
-          <p>08.00 WIB - Selesai</p>
-          <p>Jl. Contoh Alamat Acara, Desa/Kecamatan, Kabupaten</p>
+        <h3 class="section-title">Detail Acara</h3>
+        <div class="event-grid">
+          <div class="event-card">
+            <i class="bi bi-heart-fill"></i>
+            <h4>Akad Nikah</h4>
+            <p>Ahad, 21 September 2026</p>
+            <p>08.00 WIB - Selesai</p>
+            <p>Gedung Serbaguna Wijaya Kusuma<br>Jombang, Jawa Timur</p>
+          </div>
+          <div class="event-card">
+            <i class="bi bi-stars"></i>
+            <h4>Resepsi</h4>
+            <p>Ahad, 21 September 2026</p>
+            <p>10.00 WIB - Selesai</p>
+            <p>Gedung Serbaguna Wijaya Kusuma<br>Jombang, Jawa Timur</p>
+          </div>
         </div>
-        <div class="event-card" data-aos="fade-up">
-          <h3>Resepsi</h3>
-          <p class="big-date">Minggu, 28 Desember 2026</p>
-          <p>10.00 WIB - Selesai</p>
-          <p>Jl. Contoh Alamat Acara, Desa/Kecamatan, Kabupaten</p>
-        </div>
-        <a class="map-btn" href="https://maps.google.com" target="_blank" rel="noopener">Buka Google Maps</a>
+        <a class="btn-outline" href="https://maps.google.com" target="_blank">
+          <i class="bi bi-geo-alt"></i> Buka Google Maps
+        </a>
       </div>
     </section>
 
-    <section class="section-panel gallery-section">
-      <div class="container text-center">
-        <p class="small-title" data-aos="fade-up">Galeri</p>
-        <h2 class="section-title" data-aos="fade-up">Moment Bahagia</h2>
+    <section class="story section-jawa">
+      <div class="container">
+        <h3 class="section-title">Love Story</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>2022</span>
+            <h4>Awal Bertemu</h4>
+            <p>Kami dipertemukan dalam suasana sederhana yang perlahan menumbuhkan rasa saling mengenal.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2025</span>
+            <h4>Lamaran</h4>
+            <p>Dengan restu keluarga, kami melangkah ke tahap yang lebih serius untuk menyatukan dua keluarga.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2026</span>
+            <h4>Pernikahan</h4>
+            <p>InsyaAllah kami akan mengikat janji suci dalam pernikahan yang penuh berkah.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section-light">
+      <div class="container">
+        <h3 class="section-title">Galeri</h3>
         <div class="gallery-grid">
-          <div data-aos="zoom-in">Foto 1</div>
-          <div data-aos="zoom-in" data-aos-delay="100">Foto 2</div>
-          <div data-aos="zoom-in" data-aos-delay="200">Foto 3</div>
-          <div data-aos="zoom-in" data-aos-delay="300">Foto 4</div>
+          <div class="gallery-item g1"></div>
+          <div class="gallery-item g2"></div>
+          <div class="gallery-item g3"></div>
+          <div class="gallery-item g4"></div>
+          <div class="gallery-item g5"></div>
+          <div class="gallery-item g6"></div>
         </div>
       </div>
     </section>
 
-    <section class="section-panel wishes-section">
-      <div class="container text-center" data-aos="fade-up">
-        <p class="small-title">Ucapan & Doa</p>
+    <section class="rsvp section-jawa">
+      <div class="container">
+        <h3 class="section-title">RSVP & Ucapan</h3>
         <form id="wishForm" class="wish-form">
           <input type="text" id="guestName" placeholder="Nama Anda" required>
-          <textarea id="guestWish" placeholder="Tulis ucapan dan doa" required></textarea>
-          <button type="submit">Kirim Ucapan</button>
+          <select id="attendance" required>
+            <option value="">Konfirmasi Kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+            <option value="Masih Ragu">Masih Ragu</option>
+          </select>
+          <textarea id="message" rows="4" placeholder="Tulis ucapan dan doa..." required></textarea>
+          <button class="btn-gold" type="submit">Kirim Ucapan</button>
         </form>
-        <div class="wish-list" id="wishList"></div>
+        <div id="wishList" class="wish-list"></div>
       </div>
     </section>
 
-    <section class="section-panel closing-section">
-      <div class="container text-center" data-aos="zoom-in">
-        <p class="small-title">Terima Kasih</p>
-        <h2>Muhammad Hibatulloh</h2>
-        <div class="amp">&</div>
-        <h2>Maulidin Nimaturrosyidah</h2>
+    <section class="gift section-light">
+      <div class="container">
+        <h3 class="section-title">Amplop Digital</h3>
+        <p class="lead">Doa restu Bapak/Ibu/Saudara/i merupakan hadiah terbaik bagi kami.</p>
+        <div class="bank-grid">
+          <div class="bank-card">
+            <h4>BCA</h4>
+            <p id="rekBca">1234567890</p>
+            <small>a.n. Muhammad Hibatulloh</small>
+            <button onclick="copyText('rekBca')" class="copy-btn">Copy Rekening</button>
+          </div>
+          <div class="bank-card">
+            <h4>BRI</h4>
+            <p id="rekBri">0987654321</p>
+            <small>a.n. Maulidin Nimaturrosyidah</small>
+            <button onclick="copyText('rekBri')" class="copy-btn">Copy Rekening</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing section-jawa">
+      <div class="container">
+        <h2>Terima Kasih</h2>
         <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+        <h3>Hibatulloh & Maulidin</h3>
       </div>
     </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <nav class="bottom-nav hidden" id="bottomNav">
+    <a href="#content"><i class="bi bi-house"></i><span>Home</span></a>
+    <a href="#countdownBox"><i class="bi bi-calendar-heart"></i><span>Acara</span></a>
+    <a href="#wishForm"><i class="bi bi-chat-heart"></i><span>Ucapan</span></a>
+    <a href="#musicBtn"><i class="bi bi-music-note"></i><span>Musik</span></a>
+  </nav>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>

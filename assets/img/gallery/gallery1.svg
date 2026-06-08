@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop stop-color="#4f2615" offset="0"/>
+    <stop stop-color="#d7a94c" offset="1"/>
+  </linearGradient>
+  <pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse">
+    <path d="M40 5 C65 20 65 60 40 75 C15 60 15 20 40 5Z" fill="none" stroke="rgba(255,245,210,.35)" stroke-width="3"/>
+  </pattern>
+</defs>
+<rect width="1200" height="1600" fill="url(#g)"/>
+<rect width="1200" height="1600" fill="url(#p)" opacity=".55"/>
+<path d="M100 1220 Q600 940 1100 1220 L1100 1600 L100 1600Z" fill="rgba(38,17,8,.65)"/>
+<path d="M160 1240 L160 780 Q600 460 1040 780 L1040 1240Z" fill="rgba(255,245,210,.16)" stroke="rgba(255,231,162,.75)" stroke-width="14"/>
+<path d="M270 1180 L270 850 Q600 650 930 850 L930 1180Z" fill="rgba(43,22,13,.6)" stroke="rgba(255,231,162,.55)" stroke-width="8"/>
+<circle cx="600" cy="500" r="160" fill="rgba(255,231,162,.2)" stroke="rgba(255,231,162,.45)" stroke-width="5"/>
+<text x="600" y="455" font-size="90" text-anchor="middle" fill="#fff1c7" font-family="Georgia">Foto 1</text>
+<text x="600" y="535" font-size="38" text-anchor="middle" fill="#fff1c7" font-family="Georgia">Ganti dengan foto asli</text>
+</svg>
